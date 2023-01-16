@@ -3,30 +3,30 @@ import random
 from random import choice
 from re import*
 import string
+
 def password(a:int):
-    """enter a password 
-    """
-
-    pass1= ""
-    for i in range(a):
-        t=choice(string.ascii_letters) #AA...zz
-        num=choice([1,2,3,4,5,6,7,8,9])
-        
-        t_num=[t,str(num)]
-        pass1+=choice(t_num)
-    return pass1
-
-
-
-username=['username1','username2','username3']
-pass2=['use1','use2','use3']
-def username(b:str):
-    user_name=" "
-    for i in range(b):
-        user_name=input('username:')
-        if user_name==username:
-            print('OKI')
-
+	"""
+	"""
+	pass1=" "
+	for i in range(a):
+		t=choice(string.ascii_letters)
+		num=choice([1,2,3,4,5,6,7,8,9])
+		t_num=[t,str(num)]
+		pass1+=choice(t_num)
+	return pass1
+def username(b):
+	user=" "
+	b=choice(string.ascii_letters)
+	
+def askPassword(success, failure):
+    loginpass=" "
+    login =    input().lower()
+    password = input().lower()
+    message = check_passord(login, password)
+    if message:
+        failure(login, message)
+    else:
+        success(login)
 
 
 
