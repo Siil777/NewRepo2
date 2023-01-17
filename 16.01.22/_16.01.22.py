@@ -1,11 +1,16 @@
 ﻿from module1 import*
 
-#username=['username1','username2','username3']
-#pass2=['use1','use2','use3']
+u=['user1','user2','user3']
+#passwords=['user11','user22','user33']
 
 pass1=password(6)
 while True:
+	m=random.choice(u)
 	password=input('password')
+	if password==password and password==password and password==password:
+		print('succses')
+	else:
+		print('failure')
 #	password2=input('password')
 	a=True
 	if len(password)<6:
@@ -23,9 +28,11 @@ while True:
 		  		login =    input('login')
 		  		password = input('password')
 		  		if login==user_name or password==password:
-		  			print('success')
+		  			message='succses'
 		  		else:
-		  			print('failure')           
+		  			message='failure'
+		  		print(message)
+		  		break
 
 
 print('Enter or Registration!')
